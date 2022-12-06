@@ -1,6 +1,6 @@
 ﻿Imports System.Math
 Public Class Form1
-    Dim num1 As Integer, num2 As Integer, operand As Integer, ans As Decimal
+    Dim num1 As Decimal, num2 As Decimal, operand As Integer, ans As Decimal
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
         ResultLabel.Text = ""
         num1 = Nothing
@@ -50,50 +50,79 @@ Public Class Form1
     Private Sub Button0_Click(sender As Object, e As EventArgs) Handles Button0.Click
         writeNumber("0")
     End Sub
-
+    Private Sub ButtonDecimal_Click(sender As Object, e As EventArgs) Handles ButtonDecimal.Click
+        writeNumber(".")
+    End Sub
     Private Sub ButtonPlus_Click(sender As Object, e As EventArgs) Handles ButtonPlus.Click
         operand = 1
-        num1 = CInt(ResultLabel.Text)
+        If Not ResultLabel.Text.Contains(".") Or ResultLabel.Text.EndsWith(".") Then
+            ResultLabel.Text = ResultLabel.Text.Replace(".", "")
+            writeNumber(".0")
+        End If
+        num1 = CDec(ResultLabel.Text)
         ResultLabel.Text = ""
     End Sub
 
     Private Sub ButtonMinus_Click(sender As Object, e As EventArgs) Handles ButtonMinus.Click
         operand = 2
-        num1 = CInt(ResultLabel.Text)
+        If Not ResultLabel.Text.Contains(".") Or ResultLabel.Text.EndsWith(".") Then
+            ResultLabel.Text = ResultLabel.Text.Replace(".", "")
+            writeNumber(".0")
+        End If
+        num1 = CDec(ResultLabel.Text)
         ResultLabel.Text = ""
     End Sub
 
     Private Sub ButtonTimes_Click(sender As Object, e As EventArgs) Handles ButtonTimes.Click
         operand = 3
+        If Not ResultLabel.Text.Contains(".") Or ResultLabel.Text.EndsWith(".") Then
+            ResultLabel.Text = ResultLabel.Text.Replace(".", "")
+            writeNumber(".0")
+        End If
         num1 = CInt(ResultLabel.Text)
         ResultLabel.Text = ""
     End Sub
 
     Private Sub ButtonDivide_Click(sender As Object, e As EventArgs) Handles ButtonDivide.Click
         operand = 4
-        num1 = CInt(ResultLabel.Text)
+        If Not ResultLabel.Text.Contains(".") Or ResultLabel.Text.EndsWith(".") Then
+            ResultLabel.Text = ResultLabel.Text.Replace(".", "")
+            writeNumber(".0")
+        End If
+        num1 = CDec(ResultLabel.Text)
         ResultLabel.Text = ""
     End Sub
 
     Private Sub ButtonEquals_Click(sender As Object, e As EventArgs) Handles ButtonEquals.Click
         Try
-            num2 = CInt(ResultLabel.Text)
+            If Not ResultLabel.Text.Contains(".") Or ResultLabel.Text.EndsWith(".") Then
+                ResultLabel.Text = ResultLabel.Text.Replace(".", "")
+                writeNumber(".0")
+            End If
+            num2 = CDec(ResultLabel.Text)
         Catch
             Return
         End Try
 
-        If operand = 1 Then
-            ans = num1 + num2
-        ElseIf operand = 2 Then
-            ans = num1 - num2
-        ElseIf operand = 3 Then
-            ans = num1 * num2
-        ElseIf operand = 4 Then
-            ans = num1 / num2
-        Else
+        Try
+            If operand = 1 Then
+                ans = num1 + num2
+            ElseIf operand = 2 Then
+                ans = num1 - num2
+            ElseIf operand = 3 Then
+                ans = num1 * num2
+            ElseIf operand = 4 Then
+                ans = num1 / num2
+            Else
+                Return
+            End If
+            ResultLabel.Text = ans
+            num2 = 0
+
+        Catch
+            ResultLabel.Text = "Err, Number Too Large"
             Return
-        End If
-        ResultLabel.Text = ans
+        End Try
     End Sub
 
     Private Sub ButtonSQRT_Click(sender As Object, e As EventArgs) Handles ButtonSQRT.Click

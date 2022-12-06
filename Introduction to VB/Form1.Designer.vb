@@ -42,6 +42,7 @@ Partial Class Form1
         Me.ButtonClear = New System.Windows.Forms.Button()
         Me.ButtonANS = New System.Windows.Forms.Button()
         Me.ButtonSQRT = New System.Windows.Forms.Button()
+        Me.ButtonDecimal = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -173,9 +174,9 @@ Partial Class Form1
         '
         'ButtonEquals
         '
-        Me.ButtonEquals.Location = New System.Drawing.Point(12, 396)
+        Me.ButtonEquals.Location = New System.Drawing.Point(327, 394)
         Me.ButtonEquals.Name = "ButtonEquals"
-        Me.ButtonEquals.Size = New System.Drawing.Size(414, 70)
+        Me.ButtonEquals.Size = New System.Drawing.Size(208, 70)
         Me.ButtonEquals.TabIndex = 14
         Me.ButtonEquals.Text = "="
         Me.ButtonEquals.UseVisualStyleBackColor = True
@@ -200,7 +201,7 @@ Partial Class Form1
         '
         'ButtonClear
         '
-        Me.ButtonClear.Location = New System.Drawing.Point(12, 320)
+        Me.ButtonClear.Location = New System.Drawing.Point(12, 394)
         Me.ButtonClear.Name = "ButtonClear"
         Me.ButtonClear.Size = New System.Drawing.Size(99, 70)
         Me.ButtonClear.TabIndex = 16
@@ -209,7 +210,7 @@ Partial Class Form1
         '
         'ButtonANS
         '
-        Me.ButtonANS.Location = New System.Drawing.Point(222, 320)
+        Me.ButtonANS.Location = New System.Drawing.Point(222, 394)
         Me.ButtonANS.Name = "ButtonANS"
         Me.ButtonANS.Size = New System.Drawing.Size(99, 70)
         Me.ButtonANS.TabIndex = 17
@@ -225,12 +226,22 @@ Partial Class Form1
         Me.ButtonSQRT.Text = "SQRT"
         Me.ButtonSQRT.UseVisualStyleBackColor = True
         '
+        'ButtonDecimal
+        '
+        Me.ButtonDecimal.Location = New System.Drawing.Point(222, 318)
+        Me.ButtonDecimal.Name = "ButtonDecimal"
+        Me.ButtonDecimal.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonDecimal.TabIndex = 19
+        Me.ButtonDecimal.Text = "."
+        Me.ButtonDecimal.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(547, 476)
+        Me.Controls.Add(Me.ButtonDecimal)
         Me.Controls.Add(Me.ButtonSQRT)
         Me.Controls.Add(Me.ButtonANS)
         Me.Controls.Add(Me.ButtonClear)
@@ -278,4 +289,5 @@ Partial Class Form1
     Friend WithEvents ButtonClear As Button
     Friend WithEvents ButtonANS As Button
     Friend WithEvents ButtonSQRT As Button
+    Friend WithEvents ButtonDecimal As Button
 End Class
