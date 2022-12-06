@@ -1,4 +1,5 @@
-﻿Public Class Form1
+﻿Imports System.Math
+Public Class Form1
     Dim num1 As Integer, num2 As Integer, operand As Integer, ans As Decimal
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
         ResultLabel.Text = ""
@@ -12,42 +13,42 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ResultLabel.Text = ResultLabel.Text + "1"
+        writeNumber("1")
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        ResultLabel.Text = ResultLabel.Text + "2"
+        writeNumber("2")
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        ResultLabel.Text = ResultLabel.Text + "3"
+        writeNumber("3")
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        ResultLabel.Text = ResultLabel.Text + "4"
+        writeNumber("4")
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        ResultLabel.Text = ResultLabel.Text + "5"
+        writeNumber("5")
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        ResultLabel.Text = ResultLabel.Text + "6"
+        writeNumber("6")
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        ResultLabel.Text = ResultLabel.Text + "7"
+        writeNumber("7")
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        ResultLabel.Text = ResultLabel.Text + "8"
+        writeNumber("8")
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        ResultLabel.Text = ResultLabel.Text + "9"
+        writeNumber("9")
     End Sub
 
     Private Sub Button0_Click(sender As Object, e As EventArgs) Handles Button0.Click
-        ResultLabel.Text = ResultLabel.Text + "0"
+        writeNumber("0")
     End Sub
 
     Private Sub ButtonPlus_Click(sender As Object, e As EventArgs) Handles ButtonPlus.Click
@@ -93,5 +94,19 @@
             Return
         End If
         ResultLabel.Text = ans
+    End Sub
+
+    Private Sub ButtonSQRT_Click(sender As Object, e As EventArgs) Handles ButtonSQRT.Click
+        num1 = CInt(ResultLabel.Text)
+        ans = Sqrt(num1)
+        ResultLabel.Text = ans
+    End Sub
+
+    Private Sub writeNumber(number As String)
+        ResultLabel.Text = ResultLabel.Text + number
+    End Sub
+
+    Private Sub setAnsLabel(text As String)
+
     End Sub
 End Class

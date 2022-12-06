@@ -41,6 +41,7 @@ Partial Class Form1
         Me.ResultLabel = New System.Windows.Forms.Label()
         Me.ButtonClear = New System.Windows.Forms.Button()
         Me.ButtonANS = New System.Windows.Forms.Button()
+        Me.ButtonSQRT = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -174,7 +175,7 @@ Partial Class Form1
         '
         Me.ButtonEquals.Location = New System.Drawing.Point(12, 396)
         Me.ButtonEquals.Name = "ButtonEquals"
-        Me.ButtonEquals.Size = New System.Drawing.Size(409, 70)
+        Me.ButtonEquals.Size = New System.Drawing.Size(414, 70)
         Me.ButtonEquals.TabIndex = 14
         Me.ButtonEquals.Text = "="
         Me.ButtonEquals.UseVisualStyleBackColor = True
@@ -184,7 +185,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.ResultLabel)
         Me.Panel1.Location = New System.Drawing.Point(13, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(408, 74)
+        Me.Panel1.Size = New System.Drawing.Size(522, 74)
         Me.Panel1.TabIndex = 15
         '
         'ResultLabel
@@ -215,12 +216,22 @@ Partial Class Form1
         Me.ButtonANS.Text = "ANS"
         Me.ButtonANS.UseVisualStyleBackColor = True
         '
+        'ButtonSQRT
+        '
+        Me.ButtonSQRT.Location = New System.Drawing.Point(436, 92)
+        Me.ButtonSQRT.Name = "ButtonSQRT"
+        Me.ButtonSQRT.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonSQRT.TabIndex = 18
+        Me.ButtonSQRT.Text = "SQRT"
+        Me.ButtonSQRT.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Highlight
-        Me.ClientSize = New System.Drawing.Size(433, 476)
+        Me.ClientSize = New System.Drawing.Size(547, 476)
+        Me.Controls.Add(Me.ButtonSQRT)
         Me.Controls.Add(Me.ButtonANS)
         Me.Controls.Add(Me.ButtonClear)
         Me.Controls.Add(Me.Panel1)
@@ -266,4 +277,5 @@ Partial Class Form1
     Friend WithEvents ResultLabel As Label
     Friend WithEvents ButtonClear As Button
     Friend WithEvents ButtonANS As Button
+    Friend WithEvents ButtonSQRT As Button
 End Class
