@@ -39,6 +39,8 @@ Partial Class Form1
         Me.ButtonEquals = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ResultLabel = New System.Windows.Forms.Label()
+        Me.ButtonClear = New System.Windows.Forms.Button()
+        Me.ButtonANS = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -195,12 +197,32 @@ Partial Class Form1
         Me.ResultLabel.Size = New System.Drawing.Size(0, 26)
         Me.ResultLabel.TabIndex = 0
         '
+        'ButtonClear
+        '
+        Me.ButtonClear.Location = New System.Drawing.Point(12, 320)
+        Me.ButtonClear.Name = "ButtonClear"
+        Me.ButtonClear.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonClear.TabIndex = 16
+        Me.ButtonClear.Text = "CLR"
+        Me.ButtonClear.UseVisualStyleBackColor = True
+        '
+        'ButtonANS
+        '
+        Me.ButtonANS.Location = New System.Drawing.Point(222, 320)
+        Me.ButtonANS.Name = "ButtonANS"
+        Me.ButtonANS.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonANS.TabIndex = 17
+        Me.ButtonANS.Text = "ANS"
+        Me.ButtonANS.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(433, 476)
+        Me.Controls.Add(Me.ButtonANS)
+        Me.Controls.Add(Me.ButtonClear)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ButtonEquals)
         Me.Controls.Add(Me.ButtonDivide)
@@ -242,4 +264,6 @@ Partial Class Form1
     Friend WithEvents ButtonEquals As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ResultLabel As Label
+    Friend WithEvents ButtonClear As Button
+    Friend WithEvents ButtonANS As Button
 End Class

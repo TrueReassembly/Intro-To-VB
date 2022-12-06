@@ -1,5 +1,15 @@
 ﻿Public Class Form1
-    Dim num1 As Integer, num2 As Integer, operand As Integer
+    Dim num1 As Integer, num2 As Integer, operand As Integer, ans As Decimal
+    Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
+        ResultLabel.Text = ""
+        num1 = Nothing
+        num2 = Nothing
+        operand = Nothing
+    End Sub
+
+    Private Sub ButtonANS_Click(sender As Object, e As EventArgs) Handles ButtonANS.Click
+        ResultLabel.Text = ans
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ResultLabel.Text = ResultLabel.Text + "1"
@@ -65,7 +75,23 @@
     End Sub
 
     Private Sub ButtonEquals_Click(sender As Object, e As EventArgs) Handles ButtonEquals.Click
-        num2 = CInt(ResultLabel.Text)
-        MsgBox(num1)
+        Try
+            num2 = CInt(ResultLabel.Text)
+        Catch
+            Return
+        End Try
+
+        If operand = 1 Then
+            ans = num1 + num2
+        ElseIf operand = 2 Then
+            ans = num1 - num2
+        ElseIf operand = 3 Then
+            ans = num1 * num2
+        ElseIf operand = 4 Then
+            ans = num1 / num2
+        Else
+            Return
+        End If
+        ResultLabel.Text = ans
     End Sub
 End Class
