@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class MainCalc
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -42,12 +42,13 @@ Partial Class Form1
         Me.ButtonClear = New System.Windows.Forms.Button()
         Me.ButtonANS = New System.Windows.Forms.Button()
         Me.ButtonSQRT = New System.Windows.Forms.Button()
+        Me.ButtonDecimal = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 92)
+        Me.Button1.Location = New System.Drawing.Point(21, 92)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(99, 70)
         Me.Button1.TabIndex = 0
@@ -65,7 +66,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(222, 92)
+        Me.Button3.Location = New System.Drawing.Point(211, 92)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(99, 70)
         Me.Button3.TabIndex = 2
@@ -74,25 +75,25 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(12, 168)
+        Me.Button4.Location = New System.Drawing.Point(21, 160)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(99, 70)
+        Me.Button4.Size = New System.Drawing.Size(97, 70)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "4"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(117, 168)
+        Me.Button5.Location = New System.Drawing.Point(117, 160)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(99, 70)
+        Me.Button5.Size = New System.Drawing.Size(95, 70)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "5"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(222, 168)
+        Me.Button6.Location = New System.Drawing.Point(211, 160)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(99, 70)
         Me.Button6.TabIndex = 5
@@ -101,36 +102,36 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(12, 244)
+        Me.Button7.Location = New System.Drawing.Point(21, 227)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(99, 70)
+        Me.Button7.Size = New System.Drawing.Size(97, 68)
         Me.Button7.TabIndex = 6
         Me.Button7.Text = "7"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(117, 244)
+        Me.Button8.Location = New System.Drawing.Point(117, 227)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(99, 70)
+        Me.Button8.Size = New System.Drawing.Size(95, 68)
         Me.Button8.TabIndex = 7
         Me.Button8.Text = "8"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(222, 244)
+        Me.Button9.Location = New System.Drawing.Point(211, 227)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(99, 70)
+        Me.Button9.Size = New System.Drawing.Size(99, 68)
         Me.Button9.TabIndex = 8
         Me.Button9.Text = "9"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Button0
         '
-        Me.Button0.Location = New System.Drawing.Point(117, 320)
+        Me.Button0.Location = New System.Drawing.Point(117, 294)
         Me.Button0.Name = "Button0"
-        Me.Button0.Size = New System.Drawing.Size(99, 70)
+        Me.Button0.Size = New System.Drawing.Size(95, 70)
         Me.Button0.TabIndex = 9
         Me.Button0.Text = "0"
         Me.Button0.UseVisualStyleBackColor = True
@@ -146,7 +147,7 @@ Partial Class Form1
         '
         'ButtonMinus
         '
-        Me.ButtonMinus.Location = New System.Drawing.Point(327, 168)
+        Me.ButtonMinus.Location = New System.Drawing.Point(327, 160)
         Me.ButtonMinus.Name = "ButtonMinus"
         Me.ButtonMinus.Size = New System.Drawing.Size(99, 70)
         Me.ButtonMinus.TabIndex = 11
@@ -155,7 +156,7 @@ Partial Class Form1
         '
         'ButtonTimes
         '
-        Me.ButtonTimes.Location = New System.Drawing.Point(327, 244)
+        Me.ButtonTimes.Location = New System.Drawing.Point(327, 227)
         Me.ButtonTimes.Name = "ButtonTimes"
         Me.ButtonTimes.Size = New System.Drawing.Size(99, 70)
         Me.ButtonTimes.TabIndex = 12
@@ -164,7 +165,7 @@ Partial Class Form1
         '
         'ButtonDivide
         '
-        Me.ButtonDivide.Location = New System.Drawing.Point(327, 320)
+        Me.ButtonDivide.Location = New System.Drawing.Point(327, 294)
         Me.ButtonDivide.Name = "ButtonDivide"
         Me.ButtonDivide.Size = New System.Drawing.Size(99, 70)
         Me.ButtonDivide.TabIndex = 13
@@ -173,15 +174,16 @@ Partial Class Form1
         '
         'ButtonEquals
         '
-        Me.ButtonEquals.Location = New System.Drawing.Point(12, 396)
+        Me.ButtonEquals.Location = New System.Drawing.Point(117, 394)
         Me.ButtonEquals.Name = "ButtonEquals"
-        Me.ButtonEquals.Size = New System.Drawing.Size(414, 70)
+        Me.ButtonEquals.Size = New System.Drawing.Size(418, 70)
         Me.ButtonEquals.TabIndex = 14
         Me.ButtonEquals.Text = "="
         Me.ButtonEquals.UseVisualStyleBackColor = True
         '
         'Panel1
         '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel1.Controls.Add(Me.ResultLabel)
         Me.Panel1.Location = New System.Drawing.Point(13, 12)
         Me.Panel1.Name = "Panel1"
@@ -200,37 +202,47 @@ Partial Class Form1
         '
         'ButtonClear
         '
-        Me.ButtonClear.Location = New System.Drawing.Point(12, 320)
+        Me.ButtonClear.Location = New System.Drawing.Point(21, 394)
         Me.ButtonClear.Name = "ButtonClear"
-        Me.ButtonClear.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonClear.Size = New System.Drawing.Size(97, 70)
         Me.ButtonClear.TabIndex = 16
         Me.ButtonClear.Text = "CLR"
         Me.ButtonClear.UseVisualStyleBackColor = True
         '
         'ButtonANS
         '
-        Me.ButtonANS.Location = New System.Drawing.Point(222, 320)
+        Me.ButtonANS.Location = New System.Drawing.Point(21, 294)
         Me.ButtonANS.Name = "ButtonANS"
-        Me.ButtonANS.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonANS.Size = New System.Drawing.Size(97, 70)
         Me.ButtonANS.TabIndex = 17
         Me.ButtonANS.Text = "ANS"
         Me.ButtonANS.UseVisualStyleBackColor = True
         '
         'ButtonSQRT
         '
-        Me.ButtonSQRT.Location = New System.Drawing.Point(436, 92)
+        Me.ButtonSQRT.Location = New System.Drawing.Point(425, 92)
         Me.ButtonSQRT.Name = "ButtonSQRT"
-        Me.ButtonSQRT.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonSQRT.Size = New System.Drawing.Size(98, 69)
         Me.ButtonSQRT.TabIndex = 18
         Me.ButtonSQRT.Text = "SQRT"
         Me.ButtonSQRT.UseVisualStyleBackColor = True
         '
-        'Form1
+        'ButtonDecimal
+        '
+        Me.ButtonDecimal.Location = New System.Drawing.Point(211, 294)
+        Me.ButtonDecimal.Name = "ButtonDecimal"
+        Me.ButtonDecimal.Size = New System.Drawing.Size(99, 70)
+        Me.ButtonDecimal.TabIndex = 19
+        Me.ButtonDecimal.Text = "."
+        Me.ButtonDecimal.UseVisualStyleBackColor = True
+        '
+        'MainCalc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Highlight
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(547, 476)
+        Me.Controls.Add(Me.ButtonDecimal)
         Me.Controls.Add(Me.ButtonSQRT)
         Me.Controls.Add(Me.ButtonANS)
         Me.Controls.Add(Me.ButtonClear)
@@ -250,7 +262,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "Form1"
+        Me.Name = "MainCalc"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -278,4 +290,5 @@ Partial Class Form1
     Friend WithEvents ButtonClear As Button
     Friend WithEvents ButtonANS As Button
     Friend WithEvents ButtonSQRT As Button
+    Friend WithEvents ButtonDecimal As Button
 End Class
